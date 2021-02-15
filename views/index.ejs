@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIPPY</title>
+    <link rel='stylesheet' href='./css/main.css'>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>CLIPY</h1>
+        </header>
+        <main>
+            <div class="paste">
+                <form action="/write" method="POST">
+                    <textarea required name="text" id="text"></textarea>
+                    <div class="btns">
+                        <button type="submit" id="paste">PASTE</button>
+                        <button id="reset" type="reset">RESET</button>
+                    </div>
+                </form>
+            </div>
+            <div class="clip">
+                <textarea readonly name="read" id="read">
+                    <%= data %>
+                </textarea>
+                <form action="/clr" method="POST">
+                    <button id="clear" type="submit">CLEAR ALL</button>
+                </form>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
